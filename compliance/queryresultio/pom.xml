@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.eclipse.rdf4j</groupId>
 		<artifactId>rdf4j-compliance</artifactId>
-		<version>2.4-SNAPSHOT</version>
+		<version>2.4.4-inception-1-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>rdf4j-queryresultio-compliance</artifactId>
@@ -15,9 +15,9 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>${project.groupId}</groupId>
+      <groupId>org.eclipse.rdf4j</groupId>
 			<artifactId>rdf4j-runtime</artifactId>
-			<version>${project.version}</version>
+			<version>${rdf4j-tools.version}</version>
 		</dependency>
 
 		<dependency>
@@ -33,9 +33,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>${project.groupId}</groupId>
+      <groupId>org.eclipse.rdf4j</groupId>
 			<artifactId>rdf4j-queryresultio-testsuite</artifactId>
-			<version>${project.version}</version>
+      <version>${rdf4j-tools.version}</version>
 		</dependency>
 
 		<dependency>
