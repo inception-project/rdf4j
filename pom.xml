@@ -5,11 +5,7 @@
 
 	<groupId>org.eclipse.rdf4j</groupId>
 	<artifactId>rdf4j-parent</artifactId>
-<<<<<<< HEAD
-	<version>2.4.4-inception-1-SNAPSHOT</version>
-=======
-	<version>2.4.5</version>
->>>>>>> f6c00b88b392f5d586ec20ab1dadd8a7df5041db
+	<version>2.4.5-inception-1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>RDF4J</name>
