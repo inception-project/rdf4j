@@ -35,7 +35,7 @@
 		<dependency>
       <groupId>org.eclipse.rdf4j</groupId>
 			<artifactId>rdf4j-queryresultio-testsuite</artifactId>
-      <version>${rdf4j-tools.version}</version>
+      <version>${rdf4j-testsuite.version}</version>
 		</dependency>
 
 		<dependency>
