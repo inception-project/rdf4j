@@ -23,7 +23,7 @@
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>rdf4j-model-testsuite</artifactId>
-			<version>${project.version}</version>
+			<version>${rdf4j-testsuite.version}</version>
 		</dependency>
 	</dependencies>
 
