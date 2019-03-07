@@ -815,10 +815,15 @@
 		</repository>
 	</repositories>
 
+  <distributionManagement>
+    <repository>
+      <id>ukp-oss</id>
+      <url>https://zoidberg.ukp.informatik.tu-darmstadt.de/artifactory/public-ukp-releases-local</url>
+    </repository>
+  </distributionManagement>
 	<scm>
-		<connection>scm:git:git://github.com:eclipse/rdf4j.git</connection>
-		<developerConnection>scm:git:git@github.com:eclipse/rdf4j.git</developerConnection>
-		<url>https://github.com/eclipse/rdf4j</url>
+		<connection>scm:git:git://github.com:inception-project/rdf4j.git</connection>
+		<developerConnection>scm:git:git@github.com:inception-project/rdf4j.git</developerConnection>
+		<url>https://github.com/inception-project/rdf4j</url>
 	</scm>
-
 </project>
