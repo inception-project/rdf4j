@@ -9,19 +9,13 @@ http://www.eclipse.org/org/documents/edl-v10.php.
 package org.eclipse.rdf4j.sparqlbuilder.rdf;
 
 import java.util.Arrays;
-<<<<<<< HEAD
-import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+import org.eclipse.rdf4j.common.net.ParsedIRI;
 import org.eclipse.rdf4j.model.BNode;
 import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.sparqlbuilder.core.SparqlBuilder;
-=======
-import org.eclipse.rdf4j.common.net.ParsedIRI;
->>>>>>> inception-2.4.x
 import org.eclipse.rdf4j.sparqlbuilder.rdf.RdfBlankNode.AnonymousBlankNode;
 import org.eclipse.rdf4j.sparqlbuilder.rdf.RdfBlankNode.LabeledBlankNode;
 import org.eclipse.rdf4j.sparqlbuilder.rdf.RdfBlankNode.PropertiesBlankNode;
