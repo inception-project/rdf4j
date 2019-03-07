@@ -68,6 +68,7 @@ public class SharedHttpClientSessionManager implements HttpClientSessionManager,
 		final ThreadFactory backingThreadFactory = Executors.defaultThreadFactory();
 		this.executor = Executors.newScheduledThreadPool(cores, new ThreadFactory() {
 
+			@Override
 			public Thread newThread(Runnable runnable) {
 				Thread thread = backingThreadFactory.newThread(runnable);
 				thread.setName(String.format("rdf4j-sesameclientimpl-%d", threadCount.getAndIncrement()));
@@ -103,6 +104,7 @@ public class SharedHttpClientSessionManager implements HttpClientSessionManager,
 	 * @param httpClient
 	 *        The httpClient to use for remote/service calls.
 	 */
+	@Override
 	public void setHttpClient(HttpClient httpClient) {
 		synchronized (this) {
 			this.httpClient = Objects.requireNonNull(httpClient, "HTTP Client cannot be null");

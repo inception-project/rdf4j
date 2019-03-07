@@ -78,7 +78,7 @@ public class JSONLDHierarchicalProcessor {
 	private static Object expandContextInDepth(Object input) {
 
 		final Map<String, Object> graph = new LinkedHashMap<>();
-		final List<Object> expanded = new ArrayList<Object>();
+		final List<Object> expanded = new ArrayList<>();
 		for (Map<String, Object> jsonNode : (ArrayList<Map<String, Object>>) input) {
 			if (jsonNode.containsKey(GRAPH)) {
 				// Add graph nodes to the return result without further processing
@@ -92,6 +92,7 @@ public class JSONLDHierarchicalProcessor {
 
 		Set<String> visited = new HashSet<>();
 		List<String> sortedNodes = getNodesOrder(graph);
+		Set<String> children = new HashSet<>();
 
 		while (visited.size() < graph.size()) {
 			Object rootNode = graph.get(getNextRoot(visited, sortedNodes));
@@ -112,7 +113,9 @@ public class JSONLDHierarchicalProcessor {
 								if (graph.containsKey(objectsPredId)
 										&& !currentNode.get(ID).equals(objectsPredId)
 										&& !currentTreeNode.hasPassedThrough(objectsPredId)) {
-									objectsPredSubjPairs.set(i, (Map<String, Object>) graph.get(objectsPredId));
+									children.add(objectsPredId);
+									objectsPredSubjPairs.set(i,
+											(Map<String, Object>)graph.get(objectsPredId));
 									frontier.add(new TreeNode(objectsPredSubjPairs.get(i), currentTreeNode));
 								}
 							}
@@ -122,6 +125,12 @@ public class JSONLDHierarchicalProcessor {
 			}
 		}
 
+		expanded.removeIf(o -> {
+			if (o instanceof Map<?, ?>) {
+				return children.contains(((Map<String, Object>)o).get(ID).toString());
+			}
+			return false;
+		});
 		return expanded;
 	}
 
