@@ -16,7 +16,7 @@
 
         <properties>
           <!-- use a pinned version of RDF4J Server - what we're testing is how the client operates against an endpoint -->
-          <rdf4j.server.version>2.4.2</rdf4j.server.version>
+          <rdf4j.server.version>2.5.0</rdf4j.server.version>
           <jetty.version>7.0.2.v20100331</jetty.version>
         </properties>
 
